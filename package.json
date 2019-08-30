@@ -1,0 +1,19 @@
+{
+  "name": "mytureta",
+  "version": "1.0.0",
+  "description": "This package contains functionalities that calculate an employees estimated pension to help him/her better plan of his/her retirement.",
+  "main": "mytureta.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iyossias-eshete/mytureta.git"
+  },
+  "author": "iyossias",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iyossias-eshete/mytureta/issues"
+  },
+  "homepage": "https://github.com/iyossias-eshete/mytureta#readme"
+}

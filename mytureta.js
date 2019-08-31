@@ -50,22 +50,14 @@ let incomeTaxRanges = [
         deductibles: 1500
     }
 ];
+
+let invalidInput = 'Invalid input';
 //data 
 
 const displayNumbers = (num) => {
     num = num.toFixed(2);
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
-
-/*
-functions
-pensionCalculator(salary, pensionRate) // monthly
-pensionCalculator(salary, pensionRate, semiAnnual) // semi-annual = 6
-pensionCalculator(salary, pensionRate, annual) // annual = 12
-let monthlyTax = progressiveTaxCalculator(salary,incomeTaxRanges); // the gross salary is to be passed
-let netIncome = salary - monthlyTax - monthlyPension;
-let retirementIncome = calculateRetirementIncome(yearsToRetirement, salary, salaryIncrementAmount, salaryIncrementRate, pensionRate);
-*/
 
 const pensionCalculator = (salary, pensionRate, duration = monthly) => {
 
@@ -108,7 +100,7 @@ const calculateRetirementIncome = (yearsToRetirement, salary, salaryIncrementAmo
     }
 
     if (salaryIncrementRate === -1 && salaryIncrementAmount != -1) {
-        if (salaryIncrementRate < 0)
+        if (salaryIncrementAmount < 0)
             return invalidInput;
 
         for (let i = 1; i < yearsToRetirement; i++)

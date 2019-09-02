@@ -1,6 +1,6 @@
 {
   "name": "mytureta",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "This package contains functionalities that calculate an employees estimated pension to help him/her better plan of his/her retirement.",
   "main": "mytureta.js",
   "scripts": {

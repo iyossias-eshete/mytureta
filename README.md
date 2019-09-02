@@ -1,13 +1,15 @@
+
 # mytureta
+
 mytureta is a library that has different function to do basic salary computations. These functionalities includes things like monthly, semi-annual, and annual pension calculators. It also has a total retirement pension calculator that computes the pension by taking in factors such as age, retirement age, salary increment amount and percentages as well as inflation to give a realistic picture of what the employee is to expect when he/she retires.
 
-Installation
+## Installation
 
 mytureta can be cloned from git or installed by using npm. To install using npm, go to the project directory you would like to have mytureta in and use the following command:
 
 npm install mytureta
 
-Usage
+### Usage
 
 Once installed, mytureta can be imported to an existing project by requiring or importing it. To do so, use the following js code before accesing the mytureta functionalities:
 
@@ -16,7 +18,7 @@ const mytureta = require('mytureta');
 Then, the functions can be accessed from the imported mytureta variable like so:
 mytureta.pensionCalculator = (salary, pensionRate, duration = monthly)
 
-Functions
+#### Module Usage
 
 pensionCalculator (salary, pensionRate, duration )
 This function is a basic pension calculator that takes in the salary, pensionRate, and duration ( in number of month) from the user and returns the pension for the specified duration. PensionRate can be provided as a percentage number, e.g 7 would mean 7%, or as a decimal, e.g 0.07 is the same as 7%. Both are valid rates. This function returns the pension for the specified parameters or an error message if something wrong happens.

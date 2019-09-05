@@ -85,6 +85,19 @@ const calculateRetirementIncome = (yearsToRetirement, salary, salaryIncrementAmo
     let retirementIncome = 0;
     let userSalaryForecast = [salary];
 
+    if (salaryIncrementAmount !== -1 && salaryIncrementRate !== -1) {
+        if (salaryIncrementAmount <= 0 || salaryIncrementRate <= 0)
+            return invalidInput;
+        
+        // do another check to add increment percentage of more than 1
+        if (salaryIncrementRate > 1)
+            salaryIncrementRate = salaryIncrementRate / 100;
+
+        for (let i = 1; i < yearsToRetirement; i++)
+            userSalaryForecast[i] = (userSalaryForecast[i - 1] * salaryIncrementRate) + salaryIncrementAmount;
+
+    }
+
     // increment calculated via rate
     if (salaryIncrementAmount === -1 && salaryIncrementRate != -1) {
 
@@ -161,5 +174,5 @@ const requiredMonthlySavings = (amountDifference, yearsToRetirement) => {
 module.exports.displayNumbers = displayNumbers;
 module.exports.pensionCalculator = pensionCalculator;
 module.exports.calculateRetirementIncome = calculateRetirementIncome;
-module.exports.calculateRetirementIncomeWorth = calculateRetirementIncomeWorth ;
+module.exports.calculateRetirementIncomeWorth = calculateRetirementIncomeWorth;
 module.exports.progressiveTaxCalculator = progressiveTaxCalculator;

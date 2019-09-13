@@ -54,6 +54,11 @@ let incomeTaxRanges = [
 let invalidInput = 'Invalid input';
 //data 
 
+//TODO: add a new pension that consider gov workers and military
+const govPensionCalculator = ()=>{};
+
+const militaryPensionCalculator = ()=>{};
+
 const displayNumbers = (num) => {
     num = num.toFixed(2);
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
